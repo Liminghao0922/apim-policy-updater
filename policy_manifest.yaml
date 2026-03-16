@@ -1,4 +1,4 @@
 # Example policy_manifest.yaml for Azure/apim-policy-update
 policies:
-  69b52410662db9a8c1ad8c52:
+  ai-bedrock-api:
     apiPolicyPath: dist/policy.xml

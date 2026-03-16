@@ -23,6 +23,14 @@ jobs:
 
       - name: Generate APIM Policy XML
         run: python src/generate_policy.py
+        env:
+          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          APIM_PRODUCT_ID: ${{ secrets.APIM_PRODUCT_ID }}
+          AZURE_RESOURCE_GROUP: ${{ secrets.AZURE_RESOURCE_GROUP }}
+          AZURE_APIM_NAME: ${{ secrets.AZURE_APIM_NAME }}
 
       - name: Azure Login
         uses: azure/login@v2

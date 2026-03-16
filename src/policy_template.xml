@@ -4,6 +4,7 @@
         <check-header name="Authorization" failed-check-httpcode="401" failed-check-error-message="Not authorized">
             {{values}}
         </check-header>
+        <include-fragment fragment-id="AWS4-HMAC-SHA256" />
         <set-backend-service backend-id="bedrock-runtime-endpoint" />
     </inbound>
     <backend>
